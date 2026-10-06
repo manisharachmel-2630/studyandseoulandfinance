@@ -1,193 +1,1141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Korea | Study & Seoul</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Korea & Seoul | Study & Seoul</title>
 
 <style>
-*{
-  box-sizing:border-box;
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f8f5fb;
-  color:#292735;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f5fa;
+    color: #292735;
+    line-height: 1.7;
 }
 
-header{
-  background:linear-gradient(135deg,#f4d9ed,#ddd9f5);
-  text-align:center;
-  padding:50px 20px;
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    background:
+    linear-gradient(
+        135deg,
+        #f6d8ee,
+        #dfe8ff
+    );
+
+    text-align: center;
+
+    padding: 65px 20px 55px;
 }
 
-header h1{
-  font-size:45px;
-  margin:10px 0;
+header h1 {
+
+    font-size: 50px;
+
+    margin-bottom: 10px;
 }
 
-header p{
-  font-size:20px;
-  margin:15px 0;
+.logo {
+
+    font-size: 55px;
+
+    margin: 15px 0;
 }
 
-nav{
-  background:white;
-  padding:18px;
-  text-align:center;
-  box-shadow:0 2px 8px #ddd;
+.tagline {
+
+    font-size: 19px;
+
+    color: #555263;
+
+    max-width: 700px;
+
+    margin: auto;
 }
 
-nav a{
-  text-decoration:none;
-  color:#292735;
-  font-weight:bold;
-  margin:0 12px;
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+
+    background: white;
+
+    padding: 17px 10px;
+
+    text-align: center;
+
+    box-shadow:
+    0 3px 15px rgba(0,0,0,0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
 }
 
-main{
-  max-width:1000px;
-  margin:auto;
-  padding:35px 20px;
+nav a {
+
+    display: inline-block;
+
+    color: #40394c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    margin: 5px 13px;
+
+    transition: 0.3s;
 }
 
-.hero{
-  text-align:center;
-  background:white;
-  padding:35px;
-  border-radius:20px;
-  margin-bottom:25px;
-  box-shadow:0 3px 15px #ddd;
+nav a:hover {
+
+    color: #9a5a8d;
 }
 
-.hero h2{
-  font-size:32px;
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 20px;
 }
 
-.card{
-  background:white;
-  padding:25px;
-  margin:20px 0;
-  border-radius:18px;
-  box-shadow:0 3px 12px #ddd;
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 55px 30px;
+
+    text-align: center;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,0.08);
+
+    margin-bottom: 50px;
 }
 
-.card h2{
-  color:#6d4c8d;
+.hero .big-icon {
+
+    font-size: 65px;
+
+    margin-bottom: 15px;
 }
 
-.card p{
-  font-size:17px;
-  line-height:1.7;
+.hero h2 {
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
 }
 
-footer{
-  text-align:center;
-  background:#302b3d;
-  color:white;
-  padding:25px;
-  margin-top:30px;
+.hero p {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #666;
+
+    font-size: 18px;
 }
 
-@media(max-width:600px){
-  header h1{
-    font-size:36px;
-  }
 
-  nav a{
-    display:inline-block;
-    margin:7px;
-  }
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 13px 25px;
+
+    background: #8d5a9e;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
 }
+
+.btn:hover {
+
+    background: #6f417f;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.section-title p {
+
+    color: #777;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 55px;
+}
+
+.card {
+
+    background: white;
+
+    padding: 30px 25px;
+
+    border-radius: 20px;
+
+    box-shadow:
+    0 6px 22px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 12px;
+}
+
+.card h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.card p {
+
+    color: #666;
+}
+
+.card a {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #8d5a9e;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   FEATURE SECTION
+========================= */
+
+.feature {
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff,
+        #f3eef7
+    );
+
+    border-radius: 24px;
+
+    padding: 40px;
+
+    margin-bottom: 50px;
+}
+
+.feature h2 {
+
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+}
+
+.feature-list {
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.feature-list div {
+
+    background: white;
+
+    padding: 18px 20px;
+
+    margin: 12px 0;
+
+    border-radius: 15px;
+
+    box-shadow:
+    0 3px 12px rgba(0,0,0,0.05);
+}
+
+
+/* =========================
+   GOALS
+========================= */
+
+.goals {
+
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    box-shadow:
+    0 7px 25px rgba(0,0,0,0.07);
+
+    margin-bottom: 50px;
+}
+
+.goals h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.goals p {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #666;
+}
+
+.goal-grid {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.goal {
+
+    background: #f8f3f9;
+
+    padding: 20px 10px;
+
+    border-radius: 15px;
+
+    font-weight: bold;
+}
+
+.goal span {
+
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #292735;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+footer h3 {
+
+    margin-bottom: 8px;
+}
+
+footer p {
+
+    color: #ccc;
+
+    margin: 5px 0;
+}
+
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+
+@media (max-width: 800px) {
+
+    header {
+
+        padding: 50px 18px;
+    }
+
+    header h1 {
+
+        font-size: 40px;
+    }
+
+    .tagline {
+
+        font-size: 17px;
+    }
+
+    nav {
+
+        padding: 12px 5px;
+    }
+
+    nav a {
+
+        margin: 4px 7px;
+
+        font-size: 14px;
+    }
+
+    .hero h2 {
+
+        font-size: 30px;
+    }
+
+    .grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .goal-grid {
+
+        grid-template-columns:
+        repeat(2, 1fr);
+    }
+
+    .feature {
+
+        padding: 30px 20px;
+    }
+
+    .goals {
+
+        padding: 35px 20px;
+    }
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-  <h1>🇰🇷 Korea & Seoul</h1>
-  <p>My journey towards studying, learning and exploring Korea</p>
+
+    <h1>Study & Seoul</h1>
+
+    <div class="logo">
+        🇰🇷 ✈️
+    </div>
+
+    <p class="tagline">
+        Korea • Seoul • Study • Culture • Language • Travel
+    </p>
+
 </header>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
-  <a href="index.html">Home</a>
-  <a href="korea.html">Korea</a>
-  <a href="finance.html">Finance</a>
-  <a href="career.html">Career</a>
-  <a href="lifestyle.html">Lifestyle</a>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="korea.html">
+        Korea
+    </a>
+
+    <a href="finance.html">
+        Finance
+    </a>
+
+    <a href="career.html">
+        Career
+    </a>
+
+    <a href="lifestyle.html">
+        Lifestyle
+    </a>
+
 </nav>
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
 
 <main>
 
+
+<!-- HERO -->
+
 <section class="hero">
-  <h2>Welcome to My Korea Journey 🇰🇷</h2>
-  <p>
-    Korea is one of my favourite countries. I am interested in
-    Korean culture, language, education, lifestyle and future
-    career opportunities.
-  </p>
+
+    <div class="big-icon">
+        🇰🇷
+    </div>
+
+    <h2>
+        My Korea Journey
+    </h2>
+
+    <p>
+        Welcome to my Korea corner — a place where
+        I share my interest in Korean culture, language,
+        education, food, travel and life in Seoul.
+    </p>
+
+    <a
+        class="btn"
+        href="korean-beginner.html">
+
+        Start Learning Korean →
+
+    </a>
+
 </section>
 
-<section class="card">
-  <h2>🎓 Studying in Korea</h2>
-  <p>
-    I would like to study in South Korea and experience its
-    education system. I am interested in learning about
-    universities, scholarships, courses and student life.
-  </p>
+
+<!-- EXPLORE -->
+
+<div class="section-title">
+
+    <h2>
+        Explore Korea
+    </h2>
+
+    <p>
+        Discover the things that make South Korea
+        so interesting to me.
+    </p>
+
+</div>
+
+
+<section class="grid">
+
+
+    <!-- STUDY -->
+
+    <article class="card">
+
+        <div class="card-icon">
+            🎓
+        </div>
+
+        <h3>
+            Study in Korea
+        </h3>
+
+        <p>
+            Explore universities, student life,
+            scholarships, study opportunities
+            and preparing for an international education.
+        </p>
+
+        <a href="career.html">
+            Explore Opportunities →
+        </a>
+
+    </article>
+
+
+    <!-- SEOUL -->
+
+    <article class="card">
+
+        <div class="card-icon">
+            🏙️
+        </div>
+
+        <h3>
+            Seoul
+        </h3>
+
+        <p>
+            Explore Seoul, from modern city life
+            and shopping streets to traditional
+            neighbourhoods and beautiful places.
+        </p>
+
+        <a href="#seoul">
+            Discover Seoul ↓
+        </a>
+
+    </article>
+
+
+    <!-- LANGUAGE -->
+
+    <article class="card">
+
+        <div class="card-icon">
+            🗣️
+        </div>
+
+        <h3>
+            Korean Language
+        </h3>
+
+        <p>
+            Learn Hangul, basic vocabulary,
+            everyday sentences and useful Korean
+            expressions step by step.
+        </p>
+
+        <a href="korean-beginner.html">
+            Learn Korean →
+        </a>
+
+    </article>
+
+
+    <!-- CULTURE -->
+
+    <article class="card">
+
+        <div class="card-icon">
+            👘
+        </div>
+
+        <h3>
+            Korean Culture
+        </h3>
+
+        <p>
+            Learn about Korean traditions,
+            hanbok, festivals, customs and
+            the history behind Korean culture.
+        </p>
+
+        <a href="#culture">
+            Explore Culture ↓
+        </a>
+
+    </article>
+
+
+    <!-- FOOD -->
+
+    <article class="card">
+
+        <div class="card-icon">
+            🍜
+        </div>
+
+        <h3>
+            Korean Food
+        </h3>
+
+        <p>
+            Discover popular Korean foods,
+            street food and dishes I would
+            love to try someday.
+        </p>
+
+        <a href="#food">
+            Explore Food ↓
+        </a>
+
+    </article>
+
+
+    <!-- TRAVEL -->
+
+    <article class="card">
+
+        <div class="card-icon">
+            ✈️
+        </div>
+
+        <h3>
+            Travel
+        </h3>
+
+        <p>
+            Dream destinations, travel planning,
+            places to visit and experiences
+            I would love to have in Korea.
+        </p>
+
+        <a href="#travel">
+            My Travel Dreams ↓
+        </a>
+
+    </article>
+
+
 </section>
 
-<section class="card">
-  <h2>📚 Learning Korean</h2>
-  <p>
-    I am learning Korean step by step. I enjoy writing Hangul,
-    learning new Korean words, practicing sentences and listening
-    to Korean songs.
-  </p>
+
+<!-- SEOUL SECTION -->
+
+<section
+    class="feature"
+    id="seoul">
+
+    <h2>
+        🏙️ Places I Want to Explore in Seoul
+    </h2>
+
+
+    <div class="feature-list">
+
+
+        <div>
+
+            🏘️ <strong>
+            Bukchon Hanok Village
+            </strong>
+
+            <p>
+                A beautiful traditional neighbourhood
+                where you can experience historic
+                Korean architecture.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            🛍️ <strong>
+            Myeongdong
+            </strong>
+
+            <p>
+                A lively shopping area known for
+                fashion, beauty products, food and
+                Korean street culture.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            🎨 <strong>
+            Hongdae
+            </strong>
+
+            <p>
+                A youthful area famous for
+                cafés, music, art, fashion and
+                creative street culture.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            🏯 <strong>
+            Traditional Seoul
+            </strong>
+
+            <p>
+                I would love to experience the
+                traditional side of Seoul alongside
+                its modern city life.
+            </p>
+
+        </div>
+
+
+    </div>
+
 </section>
 
-<section class="card">
-  <h2>🏙️ Exploring Seoul</h2>
-  <p>
-    Seoul is a place I would love to explore. I want to visit
-    traditional places, modern shopping areas, universities and
-    beautiful streets around the city.
-  </p>
+
+<!-- FOOD SECTION -->
+
+<section
+    class="feature"
+    id="food">
+
+    <h2>
+        🍜 Korean Food I Want to Try
+    </h2>
+
+
+    <div class="feature-list">
+
+
+        <div>
+
+            🍙 <strong>
+            Gimbap
+            </strong>
+
+            <p>
+                A popular Korean rice and seaweed
+                dish with different fillings.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            🌶️ <strong>
+            Tteokbokki
+            </strong>
+
+            <p>
+                Soft rice cakes served with a
+                spicy and flavourful sauce.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            🥞 <strong>
+            Hotteok
+            </strong>
+
+            <p>
+                A sweet Korean street-food pancake,
+                often filled with sugar and nuts.
+            </p>
+
+        </div>
+
+
+    </div>
+
 </section>
 
-<section class="card">
-  <h2>🏯 Korean Culture</h2>
-  <p>
-    I am interested in Korean traditions, hanbok, traditional
-    architecture, food, music and everyday Korean culture.
-  </p>
+
+<!-- CULTURE SECTION -->
+
+<section
+    class="feature"
+    id="culture">
+
+    <h2>
+        👘 Korean Culture
+    </h2>
+
+
+    <div class="feature-list">
+
+
+        <div>
+
+            👘 <strong>
+            Hanbok
+            </strong>
+
+            <p>
+                Traditional Korean clothing with
+                beautiful colours and elegant designs.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            🏯 <strong>
+            Traditional Architecture
+            </strong>
+
+            <p>
+                Korean palaces, hanok houses and
+                traditional villages show an important
+                part of Korea's history.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            🎎 <strong>
+            Traditions
+            </strong>
+
+            <p>
+                Korean customs, celebrations and
+                traditional practices make the culture
+                especially interesting to explore.
+            </p>
+
+        </div>
+
+
+    </div>
+
 </section>
 
-<section class="card">
-  <h2>🍜 Korean Food I Want to Try</h2>
-  <p>
-    Some Korean foods I would like to try are vegetarian
-    gimbap, tteokbokki and hotteok.
-  </p>
+
+<!-- TRAVEL -->
+
+<section
+    class="feature"
+    id="travel">
+
+    <h2>
+        ✈️ My Korea Travel Dreams
+    </h2>
+
+
+    <div class="feature-list">
+
+
+        <div>
+            🌆
+            <strong>
+                Experience Seoul
+            </strong>
+
+            <p>
+                Explore the city and experience
+                both modern and traditional Korea.
+            </p>
+        </div>
+
+
+        <div>
+            📸
+            <strong>
+                Wear Hanbok
+            </strong>
+
+            <p>
+                Experience traditional Korean clothing
+                and take beautiful photographs.
+            </p>
+        </div>
+
+
+        <div>
+            🛍️
+            <strong>
+                Korean Shopping
+            </strong>
+
+            <p>
+                Explore Korean skincare, accessories,
+                fashion and interesting local products.
+            </p>
+        </div>
+
+
+        <div>
+            🍜
+            <strong>
+                Try Korean Food
+            </strong>
+
+            <p>
+                Discover Korean dishes and
+                experience the local food culture.
+            </p>
+        </div>
+
+
+    </div>
+
 </section>
 
-<section class="card">
-  <h2>✈️ My Korea Goals</h2>
-  <p>
-    My goals are to improve my Korean language skills, learn more
-    about studying in Korea, visit Seoul and experience Korean
-    culture personally.
-  </p>
+
+<!-- GOALS -->
+
+<section class="goals">
+
+    <h2>
+        🎯 My Korea Goals
+    </h2>
+
+    <p>
+        My goal is to keep learning about Korea,
+        improve my Korean language skills and
+        hopefully experience the country personally
+        in the future.
+    </p>
+
+
+    <div class="goal-grid">
+
+
+        <div class="goal">
+
+            <span>🇰🇷</span>
+
+            Learn Korean
+
+        </div>
+
+
+        <div class="goal">
+
+            <span>🎓</span>
+
+            Study
+
+        </div>
+
+
+        <div class="goal">
+
+            <span>✈️</span>
+
+            Visit Korea
+
+        </div>
+
+
+        <div class="goal">
+
+            <span>🌸</span>
+
+            Experience Culture
+
+        </div>
+
+
+    </div>
+
 </section>
+
 
 </main>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-  <p>© 2026 Study & Seoul | My Korea Journey 🇰🇷</p>
+
+    <h3>
+        Study & Seoul 🇰🇷
+    </h3>
+
+    <p>
+        Learn • Grow • Explore • Build Your Future
+    </p>
+
+    <p>
+        © 2026 Study & Seoul
+    </p>
+
 </footer>
 
+
 </body>
+
   </html>
