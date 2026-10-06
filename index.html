@@ -1,21 +1,522 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Home | Study & Seoul</title><style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#29252d;background:#fffafd;line-height:1.7}
-header{background:linear-gradient(135deg,#f7d9e8,#e6ddf8);padding:48px 20px;text-align:center}header h1{margin:0;font-size:44px}header p{margin:5px 0 0}
-nav{background:white;padding:15px;text-align:center;box-shadow:0 2px 10px #0001;position:sticky;top:0;z-index:10}nav a{margin:0 12px;color:#3b3042;text-decoration:none;font-weight:bold}
-main{max-width:1000px;margin:auto;padding:40px 20px}.hero,.card{background:white;border-radius:20px;padding:28px;box-shadow:0 7px 25px #0000000d;margin-bottom:25px}
-.hero{text-align:center}.hero h2{font-size:32px}.btn{display:inline-block;background:#6d4c7d;color:white;padding:10px 20px;border-radius:24px;text-decoration:none}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.card h3{margin-top:0}input{width:100%;padding:13px;border:1px solid #ddd;border-radius:12px;margin:10px 0 25px;font-size:16px}
-footer{text-align:center;background:#302833;color:white;padding:30px;margin-top:30px}
-</style></head><body><header><h1>Study & Seoul 🇰🇷📚</h1><p>Student life • Korea • Finance • Career • Lifestyle</p></header><nav><a href="index.html">Home</a><a href="korea.html">Korea</a><a href="finance.html">Finance</a><a href="career.html">Career</a><a href="lifestyle.html">Lifestyle</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav><main>
-<section class="hero"><h2>Welcome to Study & Seoul</h2><p>A personal blog about learning, growing, saving money, building a career and exploring Korean culture.</p><a class="btn" href="korean-beginner.html">Read my first article →</a></section>
-<h2>Latest Posts</h2><div class="grid">
-<article class="card"><h3>🇰🇷 How I Started Learning Korean</h3><p>Simple tips for beginners starting their Korean-learning journey.</p><a href="korean-beginner.html">Read article</a></article>
-<article class="card"><h3>💰 Saving Money as a Student</h3><p>Easy budgeting ideas for students.</p></article>
-<article class="card"><h3>📚 Career After B.Com</h3><p>Skills and career paths for commerce students.</p></article>
-</div>
-<h2>Find a topic</h2><input id="search" placeholder="Search posts..." onkeyup="searchPosts()"><div id="results"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Study & Seoul | Korea • Finance • Career</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f5fa;
+    color: #292735;
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #f6d8ee, #dfe8ff);
+    text-align: center;
+    padding: 70px 20px 60px;
+}
+
+header h1 {
+    font-size: 52px;
+    margin-bottom: 12px;
+    color: #292735;
+}
+
+.logo {
+    font-size: 55px;
+    margin: 15px 0;
+}
+
+.tagline {
+    font-size: 20px;
+    color: #555263;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+nav {
+    background: white;
+    padding: 18px 10px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    display: inline-block;
+    color: #40394c;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a64d88;
+}
+
+/* MAIN */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* HERO */
+.hero {
+    background: white;
+    border-radius: 24px;
+    padding: 55px 30px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    margin-bottom: 45px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #666;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 13px 25px;
+    background: #8d5a9e;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #6f417f;
+    transform: translateY(-2px);
+}
+
+/* SECTION TITLE */
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+}
+
+.section-title p {
+    color: #777;
+}
+
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 55px;
+}
+
+.card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.07);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #8d5a9e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ABOUT */
+.about {
+    background: linear-gradient(135deg, #fff, #f3eef7);
+    border-radius: 22px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #666;
+}
+
+/* SEARCH */
+.search-box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 550px;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #9b68aa;
+    box-shadow: 0 0 8px rgba(155,104,170,0.2);
+}
+
+/* FOOTER */
+footer {
+    background: #292735;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #ccc;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+
+    header {
+        padding: 50px 18px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    .tagline {
+        font-size: 17px;
+    }
+
+    nav {
+        padding: 12px 5px;
+    }
+
+    nav a {
+        margin: 4px 7px;
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        padding: 30px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>Study & Seoul</h1>
+
+    <div class="logo">🇰🇷 📚</div>
+
+    <p class="tagline">
+        Student life • Korea • Finance • Career • Lifestyle
+    </p>
+
+</header>
+
+<nav>
+
+    <a href="index.html">Home</a>
+    <a href="korea.html">Korea</a>
+    <a href="finance.html">Finance</a>
+    <a href="career.html">Career</a>
+    <a href="lifestyle.html">Lifestyle</a>
+
+</nav>
+
+<main>
+
+    <section class="hero">
+
+        <h2>Welcome to Study & Seoul ✨</h2>
+
+        <p>
+            A personal blog about learning, growing, saving money,
+            building a career and exploring Korean culture.
+        </p>
+
+        <a class="btn" href="korea.html">
+            Explore My Korea Journey →
+        </a>
+
+    </section>
+
+
+    <div class="section-title">
+
+        <h2>Explore the Blog</h2>
+
+        <p>
+            Learn, grow and discover something new.
+        </p>
+
+    </div>
+
+
+    <section class="grid">
+
+        <article class="card">
+
+            <div class="card-icon">🇰🇷</div>
+
+            <h3>Korea & Seoul</h3>
+
+            <p>
+                Korean language, culture, food, travel,
+                study opportunities and my dream of visiting Seoul.
+            </p>
+
+            <a href="korea.html">
+                Explore Korea →
+            </a>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-icon">💰</div>
+
+            <h3>Finance</h3>
+
+            <p>
+                Simple finance tips, saving money,
+                investing, budgeting and financial learning.
+            </p>
+
+            <a href="finance.html">
+                Read Finance →
+            </a>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-icon">💼</div>
+
+            <h3>Career</h3>
+
+            <p>
+                Career planning, skills, jobs, MNCs,
+                accounting, finance and professional growth.
+            </p>
+
+            <a href="career.html">
+                Explore Careers →
+            </a>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-icon">📚</div>
+
+            <h3>Student Life</h3>
+
+            <p>
+                Study tips, learning experiences,
+                productivity and life as a student.
+            </p>
+
+            <a href="korean-beginner.html">
+                Start Learning →
+            </a>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-icon">🌸</div>
+
+            <h3>Lifestyle</h3>
+
+            <p>
+                Fashion, skincare, hobbies, motivation
+                and everyday lifestyle inspiration.
+            </p>
+
+            <a href="lifestyle.html">
+                Discover More →
+            </a>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="card-icon">🎯</div>
+
+            <h3>My Goals</h3>
+
+            <p>
+                Follow my journey of improving my skills,
+                learning Korean and building my future career.
+            </p>
+
+            <a href="about.html">
+                About Me →
+            </a>
+
+        </article>
+
+    </section>
+
+
+    <section class="about">
+
+        <h2>My Journey 🌏</h2>
+
+        <p>
+            Study & Seoul is my personal space where I share
+            my journey of learning, career development, finance,
+            Korean language and my dream of experiencing South Korea.
+        </p>
+
+    </section>
+
+
+    <section class="search-box">
+
+        <div class="section-title">
+
+            <h2>Find a Topic 🔎</h2>
+
+            <p>Search for something you want to explore.</p>
+
+        </div>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Korea, finance, career..."
+            onkeyup="searchPosts()"
+        >
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <h3>Study & Seoul 🇰🇷</h3>
+
+    <p>
+        Learn • Grow • Explore • Build Your Future
+    </p>
+
+    <p>
+        © 2026 Study & Seoul
+    </p>
+
+</footer>
+
+
 <script>
-const posts=[["Korean","korean-beginner.html"],["Saving Money","finance.html"],["Career After B.Com","career.html"]];
-function searchPosts(){let q=document.getElementById('search').value.toLowerCase();document.getElementById('results').innerHTML=posts.filter(p=>p[0].toLowerCase().includes(q)).map(p=>'<p><a href="'+p[1]+'">'+p[0]+'</a></p>').join('')||'<p>No matching post yet.</p>'}
+
+const posts = [
+    ["Korea", "korea.html"],
+    ["Korean Language", "korean-beginner.html"],
+    ["Finance", "finance.html"],
+    ["Career", "career.html"],
+    ["Lifestyle", "lifestyle.html"],
+    ["About", "about.html"]
+];
+
+function searchPosts() {
+
+    let query = document
+        .getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
+
+    if (query === "") {
+        return;
+    }
+
+    let result = posts.find(post =>
+        post[0].toLowerCase().includes(query)
+    );
+
+    if (result) {
+        window.location.href = result[1];
+    }
+
+}
+
 </script>
-</main><footer>Study & Seoul 🇰🇷 | Learn • Grow • Explore<br><small>© 2026 Study & Seoul</small></footer></body></html>
+
+</body>
+  </html>
