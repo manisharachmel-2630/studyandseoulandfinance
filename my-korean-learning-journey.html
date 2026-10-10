@@ -1,1 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Blog Title | Study & Seoul</title>
+
+<style>
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f5fa;
+    color: #292735;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    background:
+    linear-gradient(
+        135deg,
+        #f6d8ee,
+        #dfe8ff
+    );
+
+    text-align: center;
+
+    padding: 55px 20px;
+}
+
+header h1 {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+header p {
+
+    color: #5f5a68;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+
+    background: white;
+
+    padding: 17px 10px;
+
+    text-align: center;
+
+    box-shadow:
+    0 3px 15px rgba(0,0,0,0.08);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+nav a {
+
+    display: inline-block;
+
+    color: #40394c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    margin: 5px 13px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+
+    color: #9a5a8d;
+}
+
+
+/* =========================
+   ARTICLE
+========================= */
+
+main {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 50px 20px;
+}
+
+
+.article {
+
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 45px;
+
+    box-shadow:
+    0 8px 30px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   CATEGORY
+========================= */
+
+.category {
+
+    display: inline-block;
+
+    background: #f1e2f3;
+
+    color: #7c4c8c;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.article h1 {
+
+    font-size: 42px;
+
+    line-height: 1.25;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.date {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   FEATURE IMAGE
+========================= */
+
+.feature-image {
+
+    width: 100%;
+
+    border-radius: 18px;
+
+    margin: 10px 0 30px;
+
+    display: block;
+}
+
+
+/* =========================
+   ARTICLE CONTENT
+========================= */
+
+.article h2 {
+
+    font-size: 28px;
+
+    margin-top: 35px;
+
+    margin-bottom: 12px;
+
+    color: #5f426c;
+}
+
+.article h3 {
+
+    font-size: 22px;
+
+    margin-top: 25px;
+
+    margin-bottom: 10px;
+}
+
+.article p {
+
+    font-size: 17px;
+
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+.article ul,
+.article ol {
+
+    margin: 15px 0 25px 25px;
+
+    color: #555;
+}
+
+.article li {
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+
+    background: #f6f0f8;
+
+    border-left: 5px solid #9a68aa;
+
+    padding: 20px 25px;
+
+    margin: 30px 0;
+
+    border-radius: 10px;
+
+    font-style: italic;
+
+    color: #5d5362;
+}
+
+
+/* =========================
+   HIGHLIGHT BOX
+========================= */
+
+.highlight {
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff7fc,
+        #f0f4ff
+    );
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    margin: 30px 0;
+}
+
+.highlight strong {
+
+    color: #74447f;
+}
+
+
+/* =========================
+   TAGS
+========================= */
+
+.tags {
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #eee;
+}
+
+.tags span {
+
+    display: inline-block;
+
+    background: #f1edf5;
+
+    color: #675c6d;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    margin: 4px;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   AUTHOR
+========================= */
+
+.author {
+
+    background: #faf8fb;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-top: 40px;
+
+    text-align: center;
+}
+
+.author h3 {
+
+    margin-bottom: 8px;
+}
+
+.author p {
+
+    font-size: 15px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back {
+
+    text-align: center;
+
+    margin-top: 35px;
+}
+
+.back a {
+
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    background: #8d5a9e;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+}
+
+.back a:hover {
+
+    background: #6f417f;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #292735;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+    margin-top: 30px;
+}
+
+footer p {
+
+    color: #ccc;
+
+    margin: 5px 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header h1 {
+
+        font-size: 36px;
+    }
+
+    nav a {
+
+        font-size: 14px;
+
+        margin: 4px 7px;
+    }
+
+    .article {
+
+        padding: 28px 20px;
+
+        border-radius: 20px;
+    }
+
+    .article h1 {
+
+        font-size: 32px;
+    }
+
+    .article h2 {
+
+        font-size: 25px;
+    }
+
+    .article p {
+
+        font-size: 16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <h1>
+        Study & Seoul
+    </h1>
+
+    <p>
+        Korea • Finance • Career • Lifestyle
+    </p>
+
+</header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="korea.html">
+        Korea
+    </a>
+
+    <a href="finance.html">
+        Finance
+    </a>
+
+    <a href="career.html">
+        Career
+    </a>
+
+    <a href="lifestyle.html">
+        Lifestyle
+    </a>
+
+</nav>
+
+
+<!-- =========================
+     ARTICLE
+========================= -->
+
+<main>
+
+<article class="article">
+
+
+    <!-- CATEGORY -->
+
+    <span class="category">
+        🇰🇷 Korea
+    </span>
+
+
+    <!-- BLOG TITLE -->
+
+    <h1>
+        My First Day Learning Korean
+    </h1>
+
+
+    <!-- DATE -->
+
+    <div class="date">
+
+        📅 October 6, 2026
+        &nbsp; • &nbsp;
+        ⏱️ 5 min read
+
+    </div>
+
+
+    <!-- FEATURE IMAGE -->
+
+    <!--
+    To add an image:
+
+    1. Upload your image to your GitHub repository.
+    2. Change "your-image.jpg"
+       to your image filename.
+
+    Example:
+
+    <img src="seoul.jpg"
+         class="feature-image"
+         alt="Seoul city">
+
+    -->
+
+    <img
+        src="your-image.jpg"
+        class="feature-image"
+        alt="Blog feature image"
+    >
+
+
+    <!-- INTRODUCTION -->
+
+    <p>
+
+        Write your introduction here.
+
+        Tell your readers what the article is about
+        and why you decided to write it.
+
+    </p>
+
+
+    <!-- SECTION 1 -->
+
+    <h2>
+        🌸 My Experience
+    </h2>
+
+    <p>
+
+        Write your first main section here.
+
+        You can share your experience,
+        thoughts, opinions or information.
+
+    </p>
+
+
+    <!-- SECTION 2 -->
+
+    <h2>
+        📚 What I Learned
+    </h2>
+
+    <p>
+
+        Explain what you learned from the experience.
+
+        You can also use bullet points:
+
+    </p>
+
+
+    <ul>
+
+        <li>
+            First important point
+        </li>
+
+        <li>
+            Second important point
+        </li>
+
+        <li>
+            Third important point
+        </li>
+
+    </ul>
+
+
+    <!-- HIGHLIGHT -->
+
+    <div class="highlight">
+
+        <strong>
+            💡 My Key Takeaway
+        </strong>
+
+        <p>
+
+            Write your most important lesson
+            or thought here.
+
+        </p>
+
+    </div>
+
+
+    <!-- QUOTE -->
+
+    <div class="quote">
+
+        "Write a meaningful quote,
+        thought or personal message here."
+
+    </div>
+
+
+    <!-- ANOTHER SECTION -->
+
+    <h2>
+        🎯 What's Next?
+    </h2>
+
+    <p>
+
+        Tell your readers what you plan to do next.
+
+        This could be another learning goal,
+        a future trip, a career goal or another
+        blog post.
+
+    </p>
+
+
+    <!-- CONCLUSION -->
+
+    <h2>
+        🌷 Final Thoughts
+    </h2>
+
+    <p>
+
+        Finish your article with your personal
+        thoughts and a simple message for your readers.
+
+    </p>
+
+
+    <!-- TAGS -->
+
+    <div class="tags">
+
+        <strong>
+            Tags:
+        </strong>
+
+        <span>#Korea</span>
+
+        <span>#Seoul</span>
+
+        <span>#KoreanLanguage</span>
+
+        <span>#StudentLife</span>
+
+    </div>
+
+
+    <!-- AUTHOR -->
+
+    <div class="author">
+
+        <h3>
+            ✨ About the Author
+        </h3>
+
+        <p>
+
+            I'm a student interested in Korea,
+            finance, career development, learning
+            and personal growth.
+
+            Welcome to my journey on
+            <strong>Study & Seoul</strong>.
+
+        </p>
+
+    </div>
+
+
+    <!-- BACK BUTTON -->
+
+    <div class="back">
+
+        <a href="index.html">
+
+            ← Back to Home
+
+        </a>
+
+    </div>
+
+
+</article>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h3>
+        Study & Seoul 🇰🇷
+    </h3>
+
+    <p>
+        Learn • Grow • Explore • Build Your Future
+    </p>
+
+    <p>
+        © 2026 Study & Seoul
+    </p>
+
+</footer>
+
+
+</body>
+
+  </html>
